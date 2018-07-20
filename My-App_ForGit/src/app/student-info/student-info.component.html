@@ -1,0 +1,37 @@
+<!-- <p>
+  student-info works!
+</p> -->
+<div class="row">
+  <div class="col-lg-12">
+  <div class="ibox float-e-margins">
+  <div class="ibox-title">
+      <h5>Angular 2 for loop typescript example - *ngFor</h5>
+  </div>
+  <div class="ibox-title">
+      <input type="text" [(value)]="values" (keyup)="onKeyUp($event)" /> <strong>Resut- {{values}}</strong>
+  </div>
+  <div class="ibox-content">
+      <div class="table-responsive">
+          <table class="table table-striped">
+              <thead>
+                  <tr>
+                      <th>ID</th>
+                      <th>Name </th>
+                      <th>SiteUrl </th>
+                      <th>Actions </th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let user of userlist; let i = index" class="tbl-row-border">
+                      <td>{{user.Id}}</td>
+                      <td>{{user.name}}</td>
+                      <td><a href="{{user.site}}" target="_blank">{{user.site}}</a></td>
+                      <td><a (click)="addUser(user)">A</a>|<a (click)="updateUser(user)">E</a>|<a (click)="deleteUser(user)">D</a></td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+  </div>
+  </div>
+  </div>
